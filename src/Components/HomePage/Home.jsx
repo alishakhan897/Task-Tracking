@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 
 
 import './Home.css'
@@ -56,7 +56,20 @@ export default function HomePage() {
 
   const TaskDone = () => {
      updatedTsk(false);
-  }
+  } 
+
+
+  useEffect(() => {
+    const savedTodos = JSON.parse(localStorage.getItem("todoList"));
+    if (savedTodos) {
+      setTodoList(savedTodos);
+    }
+  }, []);
+  
+  useEffect(() => {
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+  }, [todoList]);
+  
 
 
   return (
