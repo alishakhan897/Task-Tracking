@@ -1,123 +1,209 @@
-*{
-    padding:0px;
-    margin:0px;
+* {
+    padding: 0px;
+    margin: 0px;
 }
+
 body {
     background-color: lightgray; 
-    background-size:cover;
-  }
-   
-.main-div{
-    height:100%;
-    width:100%; 
-    display:flex ;
-    flex-direction:row;
+    background-size: cover;
 }
-.small-div{
-    width:60%;
-    margin:auto; 
-    padding:20px ;  
-    background-color:white; 
-    margin-top:10px; 
-    border-radius:10px;
-}
-.input_bar{
-    width:80%;  
-    padding:8px; 
-    border-radius:8px; 
-    outline:none;
-    border:none;  
-    font-size:25px; 
-    
 
+.main-div {
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.task{
-    font-family:"Roboto"; 
-    padding-bottom:10px;
-}
-.input_div{
-    width:90%;
-    border:2px  lightgrey solid ; 
-    padding:10px;
-    display:flex ;
-    flex-direction:row ;
-    border-radius:10px;
-    justify-content :space-between
 
+.small-div {
+    width: 60%;
+    margin: auto; 
+    padding: 20px;  
+    background-color: white; 
+    margin-top: 10px; 
+    border-radius: 10px;
 }
-.Add-btn{
-   background-color:lightslategray; 
-   color:white ;
-   padding:10px; 
-   border-radius:12px; 
-   outline:none;
-   border:none;
-   cursor:pointer;
+
+.input_bar {
+    width: 80%;  
+    padding: 8px; 
+    border-radius: 8px; 
+    outline: none;
+    border: none;  
+    font-size: 25px; 
 }
-.List_dec{
+
+.task {
+    font-family: "Roboto"; 
+    padding-bottom: 10px;
+}
+
+.input_div {
+    width: 90%;
+    border: 2px lightgrey solid; 
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.Add-btn {
+    background-color: lightslategray; 
+    color: white;
+    padding: 10px; 
+    border-radius: 12px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.List_dec {
     list-style-type: none; 
-    background-color : lightgrey;
-    width:90%; 
-    padding:20px; 
-    margin-top:10px;
-    border-radius:12px;
-    display:flex ;
-    flex-direction:row; 
+    background-color: lightgrey;
+    width: 90%; 
+    padding: 20px; 
+    margin-top: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row; 
     justify-content: space-between; 
     align-items: center;
 }
-.EditBtn{
-    background-color:lightslategray; 
-   color:white ;
-   padding:10px; 
-   border-radius:12px; 
-   outline:none;
-   border:none;
-   cursor:pointer;
-   margin-left:8px;  
-   width:30% ;
-   
 
-}
-.btn-cont{
-    width:40%;
-    
-    height:20%;
-}
-.list-div{
-    width:30%
-}
-.DelBtn{
-    background-color:rgb(141, 167, 194); 
-   color:white ;
-   padding:10px; 
-   border-radius:12px; 
-   outline:none;
-   border:none;
-   cursor:pointer;
-   margin-left:8px;  
-   width: 30% ;
-}
-.li-tex{
-    font-size:28px; 
-    font-weight:bold;
-    font-family:'Roboto';
-} 
-.DoneBtn{
-    background-color:green; 
-   color:white ;
-   padding:10px; 
-   border-radius:12px; 
-   outline:none;
-   border:none;
-   cursor:pointer;
-   margin-left:8px;  
-   width:30% ;
+.EditBtn {
+    background-color: lightslategray; 
+    color: white;
+    padding: 10px; 
+    border-radius: 12px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;  
+    width: 30%;
 }
 
-.new-input{
+.btn-cont {
+    width: 40%;
+    height: 20%;
+}
+
+.list-div {
+    width: 30%;
+}
+
+.DelBtn {
+    background-color: rgb(141, 167, 194); 
+    color: white;
+    padding: 10px; 
+    border-radius: 12px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;  
+    width: 30%;
+}
+
+.li-tex {
+    font-size: 28px; 
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+.DoneBtn {
+    background-color: green; 
+    color: white;
+    padding: 10px; 
+    border-radius: 12px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;  
+    width: 30%;
+}
+
+.new-input {
     text-decoration: line-through;
-    font-size:28px; 
-    font-weight:bold;
-    font-family:'Roboto';
+    font-size: 28px; 
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .small-div {
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    .input_div {
+        flex-direction: column;
+    }
+
+    .input_bar {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .Add-btn {
+        width: 100%;
+    }
+
+    .List_dec {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .EditBtn, .DelBtn, .DoneBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .li-tex {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .task {
+        font-size: 22px;
+    }
+
+    .input_bar {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .Add-btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .List_dec {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .EditBtn, .DelBtn, .DoneBtn {
+        width: 100%;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .li-tex {
+        font-size: 22px;
+    }
 }
